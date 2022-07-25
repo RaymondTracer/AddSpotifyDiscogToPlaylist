@@ -1,14 +1,14 @@
 ﻿using SpotifyAPI.Web;
 
 // Get token from https://developer.spotify.com/console/post-playlist-tracks/
-string Token = "BQA5ebG7Y3jMUAO6ObZKTOpNdSlf6ma_Dr2rQH5-PADsePmUUAKtwk3gv1lY23IOCn7FwHZHkBAxuWEzeQ7uH7IwlXgx5-2ncZQzl8uUCWNbQptr7uqqapD6DDjbICB-AQbAQKvnYcrXYfvaRMVk-kRUcCEF3SfeghEiGWE4xUlsHZSg5sWvS6FNlJp_P_HkKSel6vaY_YdAbhm-xSLlp80-xHWXa-iY8-S61Y6uS9kXsFs_";
+string Token = "";
 
 // Get market code from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-string Market = "AU";
+string Market = "";
 
 // Specify ID's here:
-string Playlist = "6uYFrPYkbFDOlevOf8KqJk";
-string Artist = "7wqtxqI3eo7Gn1P7SpP6cQ"; 
+string Playlist = "";
+string Artist = "";
 
 // The API client itself.
 SpotifyClient Client = new(Token);
@@ -63,7 +63,7 @@ if (albums.Total > 0 && albums.Items != null)
                     {
                         Console.WriteLine($" {album.TotalTracks} track{S(album.TotalTracks)} found but list is null. (wtf?!?!?!?)");
                     }
- 
+
                     trackOffset += 50;
                 }
             }
